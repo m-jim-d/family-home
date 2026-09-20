@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="canonical" href="https://jljcd.com/fractals/fractals" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Mandelbrot and Julia fractals">
+
+	<title>Fractals</title>
+
+	<style>
+		body {
+			margin: 0;
+			background-color: #666;
+			color: #000;
+			font-family: Georgia, "Times New Roman", Times, serif;
+		}
+
+		.pageblock {
+			margin-left: 30px;
+			margin-top: 35px;
+			max-width: 700px;
+			padding: 20px 20px 35px;
+			background-color: #ffcc00;
+		}
+
+		@media (max-width: 600px) {
+			.pageblock {
+				margin-left: 10px;
+				margin-top: 20px;
+				padding: 15px;
+				padding-bottom: 20px;
+			}
+		}
+
+		.heading-bar {
+			display: flex;
+			align-items: baseline;
+			gap: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		.heading-bar h1 {
+			font-family: "Times New Roman", Times, serif;
+			font-size: 2rem;
+			margin: 0;
+		}
+
+		.heading-bar .back {
+			margin: 0;
+		}
+
+		p {
+			margin: 0 0 1rem;
+		}
+
+		figure {
+			margin: 0 0 1.5rem;
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto 0.5rem;
+		}
+
+		figcaption {
+			font-size: 1.1rem;
+			text-align: center;
+		}
+
+		a {
+			color: maroon;
+			text-decoration: underline;
+		}
+
+		a:hover {
+			color: white;
+			text-decoration: none;
+			background: maroon;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="pageblock">
+		<div class="heading-bar">
+			<h1>Fractals</h1>
+			<p class="back">(<a href="../oldies.html">back</a>)</p>
+		</div>
+
+		<p>These are Mandelbrot fractals. Blue Roses and Black Eyes are the Julia variations.</p>
+
+		<figure>
+			<img src="horse.jpg" alt="Horse">
+			<figcaption>Horse</figcaption>
+		</figure>
+
+		<figure>
+			<img src="stop-1-on-the-ride.jpg" alt="Stop on the way">
+			<figcaption>Stop on the way</figcaption>
+		</figure>
+
+		<figure>
+			<img src="black-eyes.jpg" alt="Black Eyes">
+			<figcaption>Black Eyes</figcaption>
+		</figure>
+
+		<figure>
+			<img src="blue-roses.jpg" alt="Blue Roses">
+			<figcaption>Blue Roses</figcaption>
+		</figure>
+
+		<figure>
+			<img src="pink-lemonade.jpg" alt="Pink Lemonade">
+			<figcaption>Pink Lemonade</figcaption>
+		</figure>
+	</div>
+
+	<script>
+		document.querySelectorAll('img').forEach(img => {
+			img.style.cursor = 'pointer';
+			img.addEventListener('click', () => {
+				window.open(img.src, '_blank');
+			});
+		});
+	</script>
+
+</body>
+
+</html>

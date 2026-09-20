@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="wedding picture">
+
+	<link rel="canonical" href="https://jljcd.com/wedding" />
+
+	<title>Wedding</title>
+
+	<style>
+		body {
+			margin: 0;
+			background-color: #fff;
+			color: #000;
+			font-family: Georgia, "Times New Roman", Times, serif;
+		}
+
+		.pageblock {
+			margin-left: 30px;
+			margin-top: 35px;
+			max-width: 1000px;
+			padding-bottom: 35px;
+			display: flex;
+			gap: 1rem;
+			align-items: flex-start;
+		}
+
+		@media (max-width: 600px) {
+			.pageblock {
+				margin-left: 5px;
+				margin-right: 5px;
+				margin-top: 5px;
+				padding-bottom: 20px;
+				flex-direction: column-reverse;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		img {
+			box-sizing: border-box;
+			max-width: 100%;
+			height: auto;
+			display: block;
+			border: 3px solid #000;
+		}
+
+		h1 {
+			font-size: 2rem;
+			margin: 0 0 1rem;
+			font-family: "Times New Roman", Times, serif;
+		}
+
+		p {
+			font-size: 1.1rem;
+			margin: 0 0 1rem;
+		}
+
+		a {
+			color: maroon;
+			text-decoration: underline;
+		}
+
+		a:hover {
+			color: white;
+			text-decoration: none;
+			background: maroon;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="pageblock">
+		<img src="wedding.jpg" width="370" height="1107" alt="Jim and Laurie">
+		<div class="details">
+			<h1>Wedding on July 9th 1992</h1>
+			<p><a href="sermon.html">Sermon</a> by the Reverend Iver C. Johnson</p>
+			<p>(<a href="index.html">back</a>)</p>
+		</div>
+	</div>
+
+</body>
+
+</html>

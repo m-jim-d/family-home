@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Carl's photos">
+
+	<link rel="canonical" href="https://jljcd.com/our-boys/carl-photos" />
+
+	<title>Carl Photos</title>
+
+	<style>
+		body {
+			margin: 0;
+			background-color: #fff;
+			color: #000;
+			font-family: Georgia, "Times New Roman", Times, serif;
+		}
+
+		.pageblock {
+			margin-left: 30px;
+			margin-top: 35px;
+			max-width: 900px;
+			padding-right: 20px;
+			padding-bottom: 35px;
+		}
+
+		@media (max-width: 600px) {
+			.pageblock {
+				margin-left: 10px;
+				margin-top: 20px;
+				padding-right: 20px;
+				padding-bottom: 20px;
+			}
+		}
+
+		h1 {
+			font-family: "Times New Roman", Times, serif;
+			font-size: 2rem;
+			margin: 0 0 1rem;
+		}
+
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.5rem;
+		}
+
+		@media (max-width: 600px) {
+			.gallery {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		figure {
+			margin: 0;
+			text-align: center;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto 0.5rem;
+		}
+
+		figcaption {
+			font-size: 1.1rem;
+		}
+
+		a {
+			color: maroon;
+			text-decoration: underline;
+		}
+
+		a:hover {
+			color: white;
+			text-decoration: none;
+			background: maroon;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="pageblock">
+		<h1>Carl Photos</h1>
+		<p>(<a href="carl.html">back</a>)</p>
+
+		<div class="gallery">
+			<figure>
+				<img src="carl-closeup-75.jpg" alt="Carl">
+				<figcaption>Carl</figcaption>
+			</figure>
+
+			<figure>
+				<img src="carl-glasses-75.jpg" alt="Carl with glasses">
+				<figcaption>Glasses</figcaption>
+			</figure>
+
+			<figure>
+				<img src="carl-trike-75.jpg" alt="Carl on a tricycle">
+				<figcaption>Tricycle</figcaption>
+			</figure>
+
+			<figure>
+				<img src="carl-sitting-75.jpg" alt="Carl sitting">
+				<figcaption>Playing on the floor</figcaption>
+			</figure>
+		</div>
+	</div>
+
+</body>
+
+</html>
