@@ -2,7 +2,7 @@
 
 Static family website for https://jljcd.com.
 
-Content is authored and maintained in `C:\Users\Jim\Documents\webcontent\jimandlaurie.co.nf`, then published to this GitHub repository with `publish.bat`.
+Content is authored and maintained in a local directory, then published to this GitHub repository with `publish.bat`.
 
 ## Scripts
 
