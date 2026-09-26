@@ -36,8 +36,27 @@
          font-size: 1.7rem;
       }
 
-      p.indent2 {
+      .indent2 {
          margin-left: 40px;
+      }
+
+      ul.indent2 {
+         list-style: none;
+         padding: 0;
+      }
+
+      ul.indent2 li {
+         margin-bottom: 0.2rem;
+      }
+
+      ul.indent2 li.separated {
+         margin-top: 1rem;
+      }
+
+      @media (max-width: 600px) {
+         ul.indent2 li {
+            margin-bottom: 0.7rem;
+         }
       }
 
       a {
@@ -71,40 +90,39 @@
    <div class="pageblock">
 
       <h1 class="sectionName" title="Jim, Laurie, Joe, Carl, and David Miller"><strong>Family</strong></h1>
-      <p class="indent2">
-         <a href="wedding.html">Wedding</a><br>
-         <a href="https://newsletters.jljcd.com">Newsletters and photos</a><br>
-         <a href="https://www.pbase.com/jdmiller">Pbase photos</a><br>
-         <a href="grandma-farm.html">A beautiful place</a><br>
-      </p>
+      <ul class="indent2">
+         <li><a href="wedding.html">Wedding</a></li>
+         <li><a href="https://newsletters.jljcd.com">Newsletters and photos</a></li>
+         <li><a href="https://www.pbase.com/jdmiller">Pbase photos</a></li>
+         <li><a href="grandma-farm.html">A beautiful place</a></li>
+      </ul>
 
       <p class="sectionName"><strong>Our boys</strong></p>
-      <p class="indent2">
-         <a href="our-boys/grandma-3-boys.html">Joseph, Carl, and David</a><br>
-         <a href="our-boys/joseph.html">Joseph (9)</a><br>
-         <a href="our-boys/carl.html">Carl (4)</a><br>
-         <a href="our-boys/david.html">David (2)</a>
-      </p>
+      <ul class="indent2">
+         <li><a href="our-boys/grandma-3-boys.html">Joseph, Carl, and David</a></li>
+         <li><a href="our-boys/joseph.html">Joseph (9)</a></li>
+         <li><a href="our-boys/carl.html">Carl (4)</a></li>
+         <li><a href="our-boys/david.html">David (2)</a></li>
+      </ul>
 
       <p class="sectionName"><strong>Back then...</strong></p>
-      <p class="indent2">
-         <a href="choir/midi-files.html">Choir MIDI files</a><br>
-         <a href="rattlesnake/intro.html">Rattlesnake Mountain</a><br>
-         <a href="star.html">Star of Bethlehem</a><br>
-         <br>
-         <a href="oldies.html">Way back when...</a>
-      </p>
+      <ul class="indent2">
+         <li><a href="choir/midi-files.html">Choir MIDI files</a></li>
+         <li><a href="rattlesnake/intro.html">Rattlesnake Mountain</a></li>
+         <li><a href="star.html">Star of Bethlehem</a></li>
+         <li class="separated"><a href="oldies.html">Way back when...</a></li>
+      </ul>
 
       <p class="sectionName"><strong>In retirement</strong></p>
-      <p class="indent2">
-         <a href="https://triquence.org">springs and pucks</a><br>
-         <a href="https://pet.triquence.org">physics engine tutorial</a><br>
-         <a href="https://waconia.triquence.org">waconia</a><br>
-         <a href="https://bincalcs.triquence.org">cool breeze</a>
-      </p>
+      <ul class="indent2">
+         <li><a href="https://triquence.org">springs and pucks</a></li>
+         <li><a href="https://pet.triquence.org">physics engine tutorial</a></li>
+         <li><a href="https://waconia.triquence.org">waconia</a></li>
+         <li><a href="https://bincalcs.triquence.org">cool breeze</a></li>
+      </ul>
 
       <p class="sectionName"><strong>Bio</strong></p>
-      <p class="indent2">We grew up in the Land of 10,000 Lakes,<br>and then lived in a desert.<br>Now we're back.</p>
+      <p class="indent2">We grew up in the Land of 10,000 Lakes, and then lived in a desert. Now we're back.</p>
 
    </div>
 
