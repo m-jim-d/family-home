@@ -1,5 +1,7 @@
 # family-home
 
+A personal family website for the Millers, with photos, writings, and memorabilia spanning several decades.
+
 Live site: https://jljcd.com
 
 ## Scripts
