@@ -53,6 +53,19 @@
          margin: 0 0 1rem;
       }
    </style>
+
+   <script>
+      function logEntryToWorker(eventDescription, mode = 'normal') {
+         const workerURL = 'https://triquence.org/pvent';
+         const payload = { mode: mode, eventDesc: eventDescription };
+
+         fetch(workerURL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+         }).catch(err => console.error('log failed:', err));
+      }
+   </script>
 </head>
 
 <body>
@@ -160,6 +173,11 @@
          had to buy four.</p>
       <p>That's all for now. God bless.</p>
    </div>
+
+   <script>
+      logEntryToWorker('NL-1999');
+   </script>
+
 </body>
 
 </html>
