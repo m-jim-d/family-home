@@ -9,126 +9,49 @@
 
 	<title>Fractals</title>
 
-	<style>
-		body {
-			margin: 0;
-			background-color: #666;
-			color: #000;
-			font-family: Georgia, "Times New Roman", Times, serif;
-		}
-
-		.pageblock {
-			margin-left: 30px;
-			margin-top: 35px;
-			max-width: 700px;
-			padding: 20px 20px 35px;
-			background-color: #ffcc00;
-		}
-
-		@media (max-width: 600px) {
-			.pageblock {
-				margin-left: 10px;
-				margin-top: 20px;
-				padding: 15px;
-				padding-bottom: 20px;
-			}
-		}
-
-		.heading-bar {
-			display: flex;
-			align-items: baseline;
-			gap: 1rem;
-			margin-bottom: 1rem;
-		}
-
-		.heading-bar h1 {
-			font-family: "Times New Roman", Times, serif;
-			font-size: 2rem;
-			margin: 0;
-		}
-
-		.heading-bar .back {
-			margin: 0;
-		}
-
-		p {
-			margin: 0 0 1rem;
-		}
-
-		figure {
-			margin: 0 0 1.5rem;
-		}
-
-		img {
-			display: block;
-			max-width: 100%;
-			height: auto;
-			margin: 0 auto 0.5rem;
-		}
-
-		figcaption {
-			font-size: 1.1rem;
-			text-align: center;
-		}
-
-		a {
-			color: maroon;
-			text-decoration: underline;
-		}
-
-		a:hover {
-			color: white;
-			text-decoration: none;
-			background: maroon;
-		}
-	</style>
+	<link rel="stylesheet" href="../pbase/pbase-gallery.css">
+	<script src="../pbase/pbase-gallery.js" defer></script>
 </head>
 
 <body>
+	<h1>Fractals</h1>
+	<p class="subtitle">These are Mandelbrot fractals. Blue Roses and Black Eyes are the Julia variations.</p>
+	<nav>(<a href="../oldies.html">back</a>)</nav>
 
-	<div class="pageblock">
-		<div class="heading-bar">
-			<h1>Fractals</h1>
-			<p class="back">(<a href="../oldies.html">back</a>)</p>
-		</div>
-
-		<p>These are Mandelbrot fractals. Blue Roses and Black Eyes are the Julia variations.</p>
-
-		<figure>
-			<img src="horse.jpg" alt="Horse">
+	<main class="gallery">
+		<figure class="gallery-item" data-rotate="0">
+			<img src="horse.jpg" alt="Horse" loading="lazy">
 			<figcaption>Horse</figcaption>
 		</figure>
 
-		<figure>
-			<img src="stop-1-on-the-ride.jpg" alt="Stop on the way">
+		<figure class="gallery-item" data-rotate="0">
+			<img src="stop-1-on-the-ride.jpg" alt="Stop on the way" loading="lazy">
 			<figcaption>Stop on the way</figcaption>
 		</figure>
 
-		<figure>
-			<img src="black-eyes.jpg" alt="Black Eyes">
+		<figure class="gallery-item" data-rotate="0">
+			<img src="black-eyes.jpg" alt="Black Eyes" loading="lazy">
 			<figcaption>Black Eyes</figcaption>
 		</figure>
 
-		<figure>
-			<img src="blue-roses.jpg" alt="Blue Roses">
+		<figure class="gallery-item" data-rotate="0">
+			<img src="blue-roses.jpg" alt="Blue Roses" loading="lazy">
 			<figcaption>Blue Roses</figcaption>
 		</figure>
 
-		<figure>
-			<img src="pink-lemonade.jpg" alt="Pink Lemonade">
+		<figure class="gallery-item" data-rotate="0">
+			<img src="pink-lemonade.jpg" alt="Pink Lemonade" loading="lazy">
 			<figcaption>Pink Lemonade</figcaption>
 		</figure>
+	</main>
+
+	<div class="lightbox-overlay" id="lightbox">
+		<button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+		<button class="lightbox-prev" type="button" aria-label="Previous photo">&#10094;</button>
+		<button class="lightbox-next" type="button" aria-label="Next photo">&#10095;</button>
+		<img id="lightbox-img" src="" alt="">
+		<div class="lightbox-caption" id="lightbox-caption"></div>
 	</div>
-
-	<script>
-		document.querySelectorAll('img').forEach(img => {
-			img.style.cursor = 'pointer';
-			img.addEventListener('click', () => {
-				window.open(img.src, '_blank');
-			});
-		});
-	</script>
-
 </body>
 
 </html>

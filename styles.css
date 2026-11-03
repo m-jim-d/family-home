@@ -1,0 +1,38 @@
+body {
+   margin: 0;
+   background-color: #EFEFEF;
+   color: #000;
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-variant-numeric: lining-nums;
+   font-feature-settings: "lnum";
+}
+
+.pageblock {
+   margin-top: var(--page-margin-top, 35px);
+   margin-left: var(--page-margin-left, 30px);
+   padding-bottom: var(--page-padding-bottom, 35px);
+}
+
+@media (max-width: 600px) {
+   .pageblock {
+      margin-left: 10px;
+      margin-top: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+   }
+}
+
+a {
+   color: maroon;
+   text-decoration: underline;
+}
+
+a:visited {
+   color: maroon;
+}
+
+a:hover {
+   color: white;
+   text-decoration: none;
+   background: maroon;
+}
