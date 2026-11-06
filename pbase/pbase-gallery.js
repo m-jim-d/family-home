@@ -12,7 +12,6 @@ function updateLightbox() {
    caption?.querySelectorAll('.caption-detail').forEach(detail => detail.remove());
    lightboxImage.src = image.currentSrc || image.src;
    lightboxImage.alt = image.alt;
-   lightboxImage.dataset.rotate = item.dataset.rotate || image.dataset.rotate || '0';
    if (lightboxCaption) {
       lightboxCaption.textContent = caption ? caption.textContent : '';
    }

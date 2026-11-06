@@ -183,45 +183,6 @@ nav {
    color: #ccc;
 }
 
-[data-rotate="90"] img,
-img[data-rotate="90"],
-#lightbox-img[data-rotate="90"] {
-   transform: rotate(90deg);
-}
-
-[data-rotate="180"] img,
-img[data-rotate="180"],
-#lightbox-img[data-rotate="180"] {
-   transform: rotate(180deg);
-}
-
-[data-rotate="270"] img,
-img[data-rotate="270"],
-#lightbox-img[data-rotate="270"] {
-   transform: rotate(270deg);
-}
-
-.gallery-item[data-rotate="90"]:hover img,
-.folder-card[data-rotate="90"]:hover img {
-   transform: rotate(90deg) scale(1.03);
-}
-
-.gallery-item[data-rotate="180"]:hover img,
-.folder-card[data-rotate="180"]:hover img {
-   transform: rotate(180deg) scale(1.03);
-}
-
-.gallery-item[data-rotate="270"]:hover img,
-.folder-card[data-rotate="270"]:hover img {
-   transform: rotate(270deg) scale(1.03);
-}
-
-#lightbox-img[data-rotate="90"],
-#lightbox-img[data-rotate="270"] {
-   max-width: 95vh;
-   max-height: 95vw;
-}
-
 @media (max-width: 600px) {
    .gallery {
       grid-template-columns: 1fr;
