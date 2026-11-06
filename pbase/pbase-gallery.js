@@ -22,10 +22,22 @@ function openLightbox(index) {
    currentIndex = index;
    updateLightbox();
    overlay.classList.add('active');
+   resetIdleTimer();
 }
 
 function closeLightbox() {
-   if (overlay) overlay.classList.remove('active');
+   if (!overlay) return;
+   overlay.classList.remove('active', 'idle');
+   clearTimeout(idleTimer);
+   items[currentIndex]?.scrollIntoView({ block: 'center' });
+}
+
+let idleTimer;
+function resetIdleTimer() {
+   if (!overlay) return;
+   overlay.classList.remove('idle');
+   clearTimeout(idleTimer);
+   idleTimer = setTimeout(() => overlay.classList.add('idle'), 1500);
 }
 
 function changeSlide(direction) {
@@ -42,6 +54,38 @@ if (overlay) {
    overlay.addEventListener('click', event => {
       if (event.target === overlay) closeLightbox();
    });
+   overlay.addEventListener('mousemove', resetIdleTimer);
+}
+
+if (lightboxImage) {
+   lightboxImage.addEventListener('click', event => {
+      if (swipeHandled) {
+         swipeHandled = false;
+         return;
+      }
+      const half = event.offsetX < lightboxImage.clientWidth / 2 ? -1 : 1;
+      changeSlide(half);
+   });
+   lightboxImage.addEventListener('mousemove', event => {
+      lightboxImage.style.cursor = event.offsetX < lightboxImage.clientWidth / 2 ? 'w-resize' : 'e-resize';
+   });
+}
+
+let touchStartX = null;
+let swipeHandled = false;
+if (overlay) {
+   overlay.addEventListener('touchstart', event => {
+      touchStartX = event.changedTouches[0].clientX;
+   }, { passive: true });
+   overlay.addEventListener('touchend', event => {
+      if (touchStartX === null) return;
+      const delta = event.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(delta) > 40) {
+         swipeHandled = true;
+         changeSlide(delta < 0 ? 1 : -1);
+      }
+   }, { passive: true });
 }
 
 const closeButton = document.querySelector('.lightbox-close');
