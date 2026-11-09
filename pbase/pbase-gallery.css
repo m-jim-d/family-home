@@ -166,7 +166,6 @@ nav {
 .lightbox-overlay.idle .lightbox-prev,
 .lightbox-overlay.idle .lightbox-next {
    opacity: 0;
-   pointer-events: none;
 }
 
 .lightbox-close {
