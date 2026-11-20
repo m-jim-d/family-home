@@ -1,0 +1,68 @@
+[
+  {
+    "folder": "jimandlaurie.co.nf",
+    "origin": "https://jljcd.com/",
+    "title": "Family — jljcd.com",
+    "children": [
+      {"title": "Photo Albums", "path": "pbase/index.html", "children": [
+        {"title": "Washington", "path": "pbase/wa/index.html", "children": [
+          {"title": "Richland (1999–2001)", "path": "pbase/wa/stg-1/index.html"},
+          {"title": "Richland (2001–2002)", "path": "pbase/wa/stg-2/index.html"},
+          {"title": "Richland (2002–2004)", "path": "pbase/wa/stg-3/index.html"},
+          {"title": "Richland (2004–2005)", "path": "pbase/wa/stg-4/index.html"},
+          {"title": "Richland Lutheran Church", "path": "pbase/wa/rlc/index.html", "children": [
+            {"title": "1999", "path": "pbase/wa/rlc/1999-12/index.html"},
+            {"title": "2000", "path": "pbase/wa/rlc/2000-12/index.html"},
+            {"title": "2001", "path": "pbase/wa/rlc/2001-12/index.html"},
+            {"title": "2003", "path": "pbase/wa/rlc/2003-12/index.html"},
+            {"title": "2004", "path": "pbase/wa/rlc/2004-12/index.html"}
+          ]}
+        ]},
+        {"title": "Minnesota", "path": "pbase/mn/index.html", "children": [
+          {"title": "Our Three Boys — Newsletter Photos", "path": "pbase/mn/newsletters/index.html"},
+          {"title": "Gustavus Jazz Lab Band (2006)", "path": "pbase/mn/2006-04/index.html"},
+          {"title": "Lake Superior (2006)", "path": "pbase/mn/2006-08/index.html"},
+          {"title": "Windsurfing on Waconia (2006)", "path": "pbase/mn/2006-10/index.html"},
+          {"title": "Lego Robots (2006)", "path": "pbase/mn/2006-11/index.html"},
+          {"title": "Mount Rushmore (2008)", "path": "pbase/mn/2008-08/index.html"},
+          {"title": "Ann Arbor and Lake Michigan (2009)", "path": "pbase/mn/2009-07/index.html"},
+          {"title": "BWCA (2011)", "path": "pbase/mn/2011-08/index.html"},
+          {"title": "Grandpa Jack’s 80th (2011)", "path": "pbase/mn/2011-10/index.html"},
+          {"title": "Monterey (2011)", "path": "pbase/mn/2011-11/index.html"},
+          {"title": "North Shore, Jim and Laurie (2013)", "path": "pbase/mn/2013-08/index.html"},
+          {"title": "De Smet, South Dakota (2015)", "path": "pbase/mn/2015-09/index.html"},
+          {"title": "Hawaii (2015)", "path": "pbase/mn/2015-10/index.html"},
+          {"title": "Hot Springs, Arkansas (2017)", "path": "pbase/mn/2017-10/index.html"},
+          {"title": "Oregon Coast (2018)", "path": "pbase/mn/2018-04/index.html"},
+          {"title": "The Marriage of Joe and Yuki (2026)", "path": "pbase/mn/2026-marriage/index.html", "children": [
+            {"title": "February", "path": "pbase/mn/2026-marriage/2026-02/index.html"},
+            {"title": "September", "path": "pbase/mn/2026-marriage/2026-09/index.html"}
+          ]}
+        ]}
+      ]},
+      {"title": "Our boys", "children": [
+        {"title": "Joseph Photos", "path": "our-boys/joseph-photos.html"},
+        {"title": "Carl Photos", "path": "our-boys/carl-photos.html"},
+        {"title": "David Photos", "path": "our-boys/david-photos.html"},
+        {"title": "David and a Popsicle", "path": "our-boys/david-popsickle.html"}
+      ]},
+      {"title": "Rattlesnake Mountain — Views from the Top", "path": "rattlesnake/gallery.html"},
+      {"title": "Fractals", "path": "fractals/fx-images.html"}
+    ]
+  },
+  {
+    "folder": "jimandlaurie.50webs",
+    "origin": "https://newsletters.jljcd.com/",
+    "title": "Newsletters and photos — newsletters.jljcd.com",
+    "children": [
+      {"title": "Eagle Creek Hike", "path": "eagle-creek/photos.html"},
+      {"title": "The Ridge", "path": "the-ridge/photos.html"},
+      {"title": "Vancouver Island", "path": "vancouver-island/photos.html"},
+      {"title": "Carl's Chess", "path": "chess/photos.html"},
+      {"title": "Card Challenges", "path": "christmas-card/card-series.html", "children": [
+        {"title": "More Card Challenges", "path": "christmas-card/card-series-2.html"}
+      ]},
+      {"title": "Our David — Memorial Photos (2019)", "path": "holiday-card-2019/david/pictures.html"}
+    ]
+  }
+]
