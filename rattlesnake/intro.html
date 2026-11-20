@@ -32,13 +32,8 @@
 		}
 
 		main {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+			columns: 2;
 			gap: 2rem;
-		}
-
-		main>section {
-			min-width: 0;
 		}
 
 		.weather-data {
@@ -53,6 +48,7 @@
 
 		figure {
 			margin: 0;
+			break-inside: avoid;
 		}
 
 		figure img {
@@ -61,13 +57,9 @@
 			display: block;
 		}
 
-		figcaption p {
-			margin-top: 0.5rem;
-		}
-
 		@media (max-width: 800px) {
 			main {
-				grid-template-columns: 1fr;
+				columns: 1;
 			}
 		}
 	</style>
@@ -83,42 +75,36 @@
 		<p class="back-link">(<a href="../index.html">back to home</a>)</p>
 
 		<main>
-			<section>
-				<p>Late last winter (1999) I got an opportunity to go up to the top of Rattlesnake. It's our local
-					mountain and 1088 meters above sea level. A friend, John Schmelzer from PNNL, took me up on one of
-					his trips to work on instrumentation.</p>
+			<figure>
+				<a href="gallery.html"><img src="observatory-small.jpg" width="450" height="353"
+						alt="Aerial view of the facilities at the top of Rattlesnake Mountain"></a>
+			</figure>
+			<p>Late last winter (1999) I got an opportunity to go up to the <a href="gallery.html">top</a> of Rattlesnake. It's our local
+				mountain and 1088 meters above sea level. A friend, John Schmelzer from PNNL, took me up on one of
+				his trips to work on instrumentation.</p>
 
-				<p>Much of the land around the mountain is a restricted federal zone and is part of ALE (Arid Lands
-					Ecology Reserve). You can't just drive or hike up. So it's a special treat to be able to check out
-					the views from the top.</p>
+			<p>Much of the land around the mountain is a restricted federal zone and is part of ALE (Arid Lands
+				Ecology Reserve). You can't just drive or hike up. So it's a special treat to see
+				the views from the top.</p>
 
-				<p>It was a bit windy up there. I set my camera to 1/1000s shutter speed to compensate for the wind
-					pushing me around. Here were the readings from the Rattlesnake weather sensors:</p>
+			<p>This photo (from the <a href="gallery.html">gallery</a>) shows an aerial view of the facilities at the top of
+				Rattlesnake mountain (including two observatories). I believe it's Mt. Rainier (or maybe
+				Adams) that shows just over the horizon.</p>
+			<p>From this aerial view you see the gradual sloping off the back side of the mountain onto the high
+				farming plateau. What you don't see is the very steep face that starts at the bottom edge of
+				the photo and leads dramatically down into the Columbia River basin where we live.</p>
+			<p>It was a bit windy up there. I set my camera to 1/1000s shutter speed to compensate for the wind
+				pushing me around. Here were the readings from the Rattlesnake weather sensors:</p>
 
-				<ul class="weather-data">
-					<li>Station# 20 (RSNK) at 3560 ft above MSL</li>
-					<li>TIME: 14: 0: 0 PST Date: 2/10/99</li>
-					<li>AVE WIND DIRECTION = 237</li>
-					<li>AVE WIND SPEED = 39</li>
-					<li>MAX WIND SPEED = 46</li>
-					<li>AVE TEMP = 29.3</li>
-					<li>Wind Chill = -6.0</li>
-				</ul>
-			</section>
-			<section>
-				<figure>
-					<a href="gallery.html"><img src="observatory-small.jpg" width="450" height="353"
-							alt="Aerial view of the facilities at the top of Rattlesnake Mountain"></a>
-					<figcaption>
-						<p>This photo (click for a gallery of images from the day) shows an aerial view of the facilities at the top of
-							Rattlesnake mountain (including two observatories). I believe it's Mt. Rainier (or maybe
-							Adams) that shows just over the horizon.</p>
-						<p>From this view you see the gradual sloping off the back side of the mountain onto the high
-							farming plateau. What you don't see is the very steep face that starts at the bottom edge of
-							the photo and leads dramatically down into the Columbia River basin where we live.</p>
-					</figcaption>
-				</figure>
-			</section>
+			<ul class="weather-data">
+				<li>Station# 20 (RSNK) at 3560 ft above MSL</li>
+				<li>TIME: 14: 0: 0 PST Date: 2/10/99</li>
+				<li>AVE WIND DIRECTION = 237</li>
+				<li>AVE WIND SPEED = 39</li>
+				<li>MAX WIND SPEED = 46</li>
+				<li>AVE TEMP = 29.3</li>
+				<li>Wind Chill = -6.0</li>
+			</ul>
 		</main>
 	</div>
 
