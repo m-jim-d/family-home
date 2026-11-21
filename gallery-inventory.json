@@ -41,9 +41,9 @@
         ]}
       ]},
       {"title": "Our Young Boys", "children": [
-        {"title": "Joseph Photos", "path": "our-boys/joseph-photos.html"},
-        {"title": "Carl Photos", "path": "our-boys/carl-photos.html"},
-        {"title": "David Photos", "path": "our-boys/david-photos.html"},
+        {"title": "Joseph", "path": "our-boys/joseph-photos.html"},
+        {"title": "Carl", "path": "our-boys/carl-photos.html"},
+        {"title": "David", "path": "our-boys/david-photos.html"},
         {"title": "David and a Popsicle", "path": "our-boys/david-popsickle.html"}
       ]},
       {"title": "Rattlesnake Mountain — Views from the Top", "path": "rattlesnake/gallery.html"},
@@ -59,9 +59,8 @@
       {"title": "The Ridge", "path": "the-ridge/photos.html"},
       {"title": "Vancouver Island", "path": "vancouver-island/photos.html"},
       {"title": "Carl's Chess", "path": "chess/photos.html"},
-      {"title": "Card Challenges", "path": "christmas-card/card-series.html", "children": [
-        {"title": "More Card Challenges", "path": "christmas-card/card-series-2.html"}
-      ]},
+      {"title": "Card Challenges", "path": "christmas-card/card-series.html"},
+      {"title": "More Card Challenges", "path": "christmas-card/card-series-2.html"},
       {"title": "Our David — Memorial Photos (2019)", "path": "holiday-card-2019/david/pictures.html"}
     ]
   }
