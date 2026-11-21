@@ -89,11 +89,11 @@ for (const site of sites) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gallery Tree View</title>
+<title>Tree View of Galleries</title>
 <style>${style}</style>
 </head>
 <body data-site="${site.folder}">
-<header><h1>Gallery tree view</h1><button id="close" type="button" aria-label="Close tree view" hidden>&times;</button><button id="expand" type="button">Expand all</button> <button id="collapse" type="button">Collapse all</button></header>
+<header><h1>Tree view of galleries</h1><button id="close" type="button" aria-label="Close tree view" hidden>&times;</button><button id="expand" type="button">Expand all</button> <button id="collapse" type="button">Collapse all</button></header>
 <nav aria-label="All galleries"><ul>${sites.map(branch => `<li><details open><summary>${escape(branch.title)}</summary>${render(branch.children, branch, site.folder)}</details></li>`).join('\n')}</ul></nav>
 <script type="application/json" id="sites">${JSON.stringify(sites.map(({ folder, origin }) => ({ folder, origin })))}</script>
 <script>(${treeBehavior.toString()})();</script>
