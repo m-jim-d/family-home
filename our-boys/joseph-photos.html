@@ -1,97 +1,46 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Joseph's photos">
-
-	<link rel="canonical" href="https://jljcd.com/our-boys/joseph-photos" />
-
-	<title>Joseph Photos</title>
-
-	<link rel="stylesheet" href="../styles.css">
-	<style>
-		.pageblock {
-			max-width: 900px;
-			padding-right: 20px;
-		}
-
-		h1 {
-			font-family: "Times New Roman", Times, serif;
-			font-size: 2rem;
-			margin: 0 0 1rem;
-		}
-
-		.gallery {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 1.5rem;
-		}
-
-		@media (max-width: 600px) {
-			.gallery {
-				grid-template-columns: 1fr;
-			}
-		}
-
-		figure {
-			margin: 0;
-			text-align: center;
-		}
-
-		img {
-			max-width: 100%;
-			height: auto;
-			display: block;
-			margin: 0 auto 0.5rem;
-		}
-
-		figcaption {
-			font-size: 1.1rem;
-		}
-	</style>
-	<script src="../tree-overlay.js" defer></script>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Joseph's photos">
+   <link rel="canonical" href="https://jljcd.com/our-boys/joseph-photos" />
+   <title>Joseph Photos</title>
+   <link rel="stylesheet" href="../pbase/pbase-gallery.css?v=7">
+   <script src="../pbase/pbase-gallery.js?v=7" defer></script>
 </head>
-
 <body>
+   <h1>Joseph</h1>
+   <nav>(<a href="joseph.html">back</a>)</nav>
+   <main class="gallery">
+      <figure class="gallery-item">
+         <img src="joseph-laser-tag.jpg" width="708" height="519" alt="Joseph playing laser tag" loading="lazy">
+         <figcaption></figcaption>
+      </figure>
+      <figure class="gallery-item">
+         <img src="joseph.jpg" width="599" height="679" alt="Joseph" loading="lazy">
+         <figcaption>What a view</figcaption>
+      </figure>
+      <figure class="gallery-item">
+         <img src="joseph-and-friends.jpg" width="448" height="459" alt="Joseph with Andy and Wes" loading="lazy">
+         <figcaption>Joseph's 9th Birthday, Wes and Andy</figcaption>
+      </figure>
+      <figure class="gallery-item">
+         <img src="joseph-08-11-97.png" width="588" height="872" alt="Joseph" loading="lazy">
+         <figcaption></figcaption>
+      </figure>
+      <figure class="gallery-item">
+         <img src="joseph-jim-gorge.png" width="891" height="598" alt="Joseph and Jim" loading="lazy">
+         <figcaption>Joseph (age 5) and Jim in the Gorge</figcaption>
+      </figure>
+   </main>
 
-	<div class="pageblock">
-		<h1>Joseph Photos</h1>
-		<p>(<a href="joseph.html">back</a>)</p>
-
-		<div class="gallery">
-			<figure>
-				<img src="joseph.jpg" alt="Joseph">
-				<figcaption>What a view</figcaption>
-			</figure>
-
-			<figure>
-				<img src="joseph-and-friends.jpg" alt="Joseph with Andy and Wes">
-				<figcaption>Joseph's 9th Birthday, Wes and Andy</figcaption>
-			</figure>
-
-			<figure>
-				<img src="joseph-08-11-97.png" alt="Joseph">
-				<figcaption>Joseph</figcaption>
-			</figure>
-
-			<figure>
-				<img src="joseph-jim-gorge.png" alt="Joseph and Jim">
-				<figcaption>Joseph (age 5) and Jim in the Gorge</figcaption>
-			</figure>
-		</div>
-	</div>
-	
-	<script>
-		document.querySelectorAll('img').forEach(img => {
-			img.style.cursor = 'pointer';
-			img.addEventListener('click', () => {
-				window.open(img.src, '_blank');
-			});
-		});
-	</script>
-		
+   <div class="lightbox-overlay" id="lightbox">
+      <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+      <button class="lightbox-prev" type="button" aria-label="Previous photo">&#10094;</button>
+      <button class="lightbox-next" type="button" aria-label="Next photo">&#10095;</button>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+   </div>
 </body>
-
 </html>
