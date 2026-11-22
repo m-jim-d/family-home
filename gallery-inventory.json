@@ -41,10 +41,10 @@
         ]}
       ]},
       {"title": "Our Young Boys", "children": [
-        {"title": "Joseph", "path": "our-boys/joseph-photos.html"},
-        {"title": "Carl", "path": "our-boys/carl-photos.html"},
-        {"title": "David", "path": "our-boys/david-photos.html"},
-        {"title": "David and a Popsicle", "path": "our-boys/david-popsickle.html"}
+        {"title": "Joseph", "path": "our-boys/joseph/photos.html"},
+        {"title": "Carl", "path": "our-boys/carl/photos.html"},
+        {"title": "David", "path": "our-boys/david/photos.html"},
+        {"title": "David and a Popsicle", "path": "our-boys/david/popsickle.html"}
       ]},
       {"title": "Rattlesnake Mountain — Views from the Top", "path": "rattlesnake/gallery.html"},
       {"title": "Fractals", "path": "fractals/fx-images.html"}
