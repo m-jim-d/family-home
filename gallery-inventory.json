@@ -2,7 +2,10 @@
   {
     "folder": "jimandlaurie.co.nf",
     "origin": "https://jljcd.com/",
-    "backends": ["https://m-jim-d.github.io/family-home/"],
+    "backends": [
+      "https://m-jim-d.github.io/family-home/",
+      "https://family-home-8gp.pages.dev/"
+    ],
     "title": "Family — jljcd.com",
     "children": [
       {"title": "Photo Albums", "path": "pbase/index.html", "children": [
@@ -54,7 +57,10 @@
   {
     "folder": "jimandlaurie.50webs",
     "origin": "https://newsletters.jljcd.com/",
-    "backends": ["https://m-jim-d.github.io/family-news/"],
+    "backends": [
+      "https://m-jim-d.github.io/family-news/",
+      "https://family-news.pages.dev/"
+    ],
     "title": "Newsletters and photos — newsletters.jljcd.com",
     "children": [
       {"title": "Eagle Creek Hike", "path": "eagle-creek/photos.html"},
