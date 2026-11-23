@@ -5,6 +5,8 @@ import assert from 'node:assert/strict';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const sites = JSON.parse(await readFile(join(root, 'gallery-inventory.json'), 'utf8'));
+const environmentCount = Math.max(...sites.map(site => (site.backends || []).length));
+assert(sites.every(site => (site.backends || []).length === environmentCount), 'Each site must provide the same number of backend origins so environment pairs stay aligned.');
 const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const seen = new Set();
 async function validate(nodes, site) {
@@ -36,15 +38,17 @@ for (const site of sites) await checkCoverage(join(root, '..', site.folder), sit
 function treeBehavior() {
    const parameters = new URLSearchParams(location.search);
    const embedded = parameters.get('overlay') === '1' && window.parent !== window;
-   const folders = JSON.parse(document.getElementById('sites').textContent);
+   const sites = JSON.parse(document.getElementById('sites').textContent);
    const home = document.body.dataset.site;
-   const local = !folders.some(site => new URL(site.origin).hostname === location.hostname);
+   const homeSite = sites.find(site => site.folder === home);
+   const environment = homeSite.bases.findIndex(base => location.href.startsWith(base));
    const normalize = path => decodeURI(path).replace(/(^|\/)index(?:\.html)?$/, '$1').replace(/\.html$/, '').replace(/\/$/, '');
+   const localBase = site => new URL(`/${site.folder}/`, location.origin);
+   const baseFor = site => new URL(environment === -1 ? localBase(site) : site.bases[environment]);
    let current;
    for (const link of document.querySelectorAll('a[data-path]')) {
-      const site = folders.find(site => site.folder === link.dataset.site);
-      const base = site.folder === home ? new URL('.', location.href) : local ? new URL(`../${site.folder}/`, location.href) : new URL(site.origin);
-      link.href = new URL(link.dataset.path, base).href;
+      const site = sites.find(site => site.folder === link.dataset.site);
+      link.href = new URL(link.dataset.path, baseFor(site)).href;
       if (embedded) link.target = '_parent';
       if (site.folder === home && normalize(link.dataset.path) === normalize(parameters.get('current') || '')) {
          current = link;
@@ -95,7 +99,7 @@ for (const site of sites) {
 <body data-site="${site.folder}">
 <header><h1>Tree view of galleries</h1><button id="close" type="button" aria-label="Close tree view" hidden>&times;</button><button id="expand" type="button">Expand all</button> <button id="collapse" type="button">Collapse all</button></header>
 <nav aria-label="All galleries"><ul>${sites.map(branch => `<li><details open><summary>${escape(branch.title)}</summary>${render(branch.children, branch, site.folder)}</details></li>`).join('\n')}</ul></nav>
-<script type="application/json" id="sites">${JSON.stringify(sites.map(({ folder, origin }) => ({ folder, origin })))}</script>
+<script type="application/json" id="sites">${JSON.stringify(sites.map(({ folder, origin, backends = [] }) => ({ folder, bases: [origin, ...backends] })))}</script>
 <script>(${treeBehavior.toString()})();</script>
 </body>
 </html>
