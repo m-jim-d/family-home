@@ -10,6 +10,7 @@
     "children": [
       {"title": "Photo Albums", "path": "pbase/index.html", "children": [
         {"title": "Washington", "path": "pbase/wa/index.html", "children": [
+          {"title": "Pelican Shores", "path": "pbase/wa/pelican/index.html"},
           {"title": "Richland (1999–2001)", "path": "pbase/wa/stg-1/index.html"},
           {"title": "Richland (2001–2002)", "path": "pbase/wa/stg-2/index.html"},
           {"title": "Richland (2002–2004)", "path": "pbase/wa/stg-3/index.html"},
